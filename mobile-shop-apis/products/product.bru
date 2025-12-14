@@ -1,0 +1,20 @@
+meta {
+  name: product
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://localhost:8000/product
+  body: none
+  auth: inherit
+}
+
+params:query {
+  ~category: Accessory
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

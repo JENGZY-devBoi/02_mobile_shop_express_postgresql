@@ -1,0 +1,26 @@
+meta {
+  name: product delete
+  type: http
+  seq: 5
+}
+
+delete {
+  url: http://localhost:8000/product/6
+  body: none
+  auth: inherit
+}
+
+body:json {
+  {
+    "name": "Apple pencil",
+    "brand": "Apple",
+    "price": 4200,
+    "stock": 50,
+    "category": "Accessory"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

@@ -1,0 +1,26 @@
+meta {
+  name: user update
+  type: http
+  seq: 2
+}
+
+put {
+  url: http://localhost:8000/user/4
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "username": "jengzy2-1234",
+    "email": "jengzy2@mail.com",
+    "password": "exampl2@1234",
+    "full_name": "Teerapong Saisrikaew",
+    "phone": "0912345678"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
